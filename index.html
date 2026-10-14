@@ -6,7 +6,7 @@
   <meta name="description" content="Sieun Seo — Ph.D. researcher in homomorphic encryption and privacy-preserving AI at Ewha Womans University.">
   <meta name="theme-color" content="#fafbfc">
   <title>Sieun Seo | Academic Homepage</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -20,9 +20,10 @@
     <p class="role">Ph.D. Student in Mathematics</p>
     <p class="affiliation">Ewha Womans University<br>Seoul, South Korea</p>
     <div class="side-divider"></div>
-    <a class="side-link" href="mailto:hello0x7@naver.com"><span>✉</span> Email</a>
-    <a class="side-link" href="https://github.com/SieunSeo" target="_blank" rel="noopener"><span>↗</span> GitHub</a>
-    <a class="side-link" href="https://github.com/SieunSeo/zephyr-gpu-fhe" target="_blank" rel="noopener"><span>⌘</span> Zephyr Code</a>
+    <a class="side-link" href="mailto:hello0x7@naver.com" aria-label="Email Sieun Seo"><span>✉</span> Email</a>
+    <a class="side-link" href="https://github.com/SieunSeo" target="_blank" rel="noopener noreferrer"><span>↗</span> GitHub</a>
+    <a class="side-link" href="https://scholar.google.com/citations?user=rkrieLkAAAAJ" target="_blank" rel="noopener noreferrer"><span>◈</span> Google Scholar</a>
+    <a class="side-link" href="https://www.linkedin.com/in/sieun-seo-4a257340b/" target="_blank" rel="noopener noreferrer"><span>in</span> LinkedIn</a>
     <p class="sidebar-note">Cryptography · Privacy-Preserving AI</p>
   </aside>
   <main>
@@ -68,9 +69,48 @@
       </div>
       <div class="skills"><span>TECHNICAL SKILLS</span><p>C++ · CUDA · Python · PyTorch · CKKS / FHE · GPU Optimization · Linux · Git</p></div>
     </section>
-    <section id="contact" class="section contact-section"><div class="section-kicker">GET IN TOUCH</div><h2>Contact</h2><p>I welcome research discussions and collaborations in cryptography and privacy-preserving AI.</p><a class="email-button" href="mailto:hello0x7@naver.com">hello0x7@naver.com <span>↗</span></a></section>
+    <section id="contact" class="section contact-section">
+      <div class="section-kicker">GET IN TOUCH</div>
+      <h2>Contact</h2>
+      <p>I welcome research discussions and collaborations in cryptography and privacy-preserving AI.</p>
+      <div class="contact-list">
+        <div class="contact-item">
+          <div class="contact-info"><span class="contact-label">Email</span><a href="mailto:hello0x7@naver.com">hello0x7@naver.com</a></div>
+          <button class="copy-button" type="button" data-copy="hello0x7@naver.com" aria-label="Copy email address">Copy email</button>
+        </div>
+        <div class="contact-item"><div class="contact-info"><span class="contact-label">GitHub</span><a href="https://github.com/SieunSeo" target="_blank" rel="noopener noreferrer">github.com/SieunSeo ↗</a></div></div>
+        <div class="contact-item"><div class="contact-info"><span class="contact-label">Google Scholar</span><a href="https://scholar.google.com/citations?user=rkrieLkAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar profile ↗</a></div></div>
+        <div class="contact-item"><div class="contact-info"><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/sieun-seo-4a257340b/" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a></div></div>
+      </div>
+      <p class="contact-hint">If clicking the email link does not open your mail app, use “Copy email” instead.</p>
+    </section>
     <footer>© 2026 Sieun Seo <span>Designed for clarity, research, and collaboration.</span></footer>
   </main>
 </div>
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (button) {
+    button.addEventListener('click', async function () {
+      var value = button.getAttribute('data-copy');
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(value);
+        } else {
+          var field = document.createElement('textarea');
+          field.value = value;
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.appendChild(field);
+          field.select();
+          if (!document.execCommand('copy')) throw new Error('Copy unavailable');
+          field.remove();
+        }
+        button.textContent = 'Copied!';
+        setTimeout(function () { button.textContent = 'Copy email'; }, 2000);
+      } catch (err) {
+        window.prompt('Copy this email address:', value);
+      }
+    });
+  });
+</script>
 </body>
 </html>
