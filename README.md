@@ -1,8 +1,17 @@
-# Sieun Seo — Academic Website
+# Sieun Seo — Academic Homepage
 
-A minimal dark academic website inspired by research homepage conventions.
+A clean, light academic website inspired by traditional researcher homepages, with improved typography, whitespace, and publication organization.
 
-## Update on GitHub Pages
-Upload `index.html`, `style.css`, and `profile.jpg` to the root of the existing `SieunSeo.github.io` repository. Commit changes; GitHub Pages republishes automatically.
+## Update GitHub Pages
 
-Edit `index.html` to add publications, news, and experience. Keep publication statuses current.
+1. Open https://github.com/SieunSeo/SieunSeo.github.io
+2. Select **Add file → Upload files**.
+3. Upload `index.html`, `style.css`, and `profile.jpg` from this folder (replace existing files).
+4. Click **Commit changes**.
+5. Visit https://sieunseo.github.io/ and hard refresh (Ctrl+Shift+R) if needed.
+
+## Customize
+
+Edit `index.html` to change research, publications, experience, or links. Edit `style.css` to change the design. The portrait file is `profile.jpg`.
+
+Publication statuses should be updated as editorial decisions change. No unverified Google Scholar/CV link is included.
